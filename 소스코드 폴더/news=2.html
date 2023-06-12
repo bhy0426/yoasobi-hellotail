@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YOASOBI 활동소개</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link href="style1.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="image/YOASOBI_LOGO.jpg" class="logo">
+    </header>
+    <nav>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="sing.html">가수소개</a></li>
+            <li><a href="music.html">음원소개</a></li>
+            <li><a href="news=1.html">활동소개</a></li>
+            <li><a href="live.html">LIVE</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="nav-line">
+        <hr id="neon-line">
+        <button id="nav-toggle">
+            <img src="image/icon/3bar.png">
+        </button>
+    </div>
+
+    <article id="article_news">
+        <h1 style=>NEWS</h1>
+        <div id="news-content">
+            <li>
+                <div class="date">2023.1.26</div>
+                <div class="detail">유니버설 스튜디오 재팬 공식 유튜브에 요아소비의 신곡 ‘어드벤처(アドベンチャー)'의 일부가 사용된 CM이 공개되었다. CM 이번 신곡은 작년 실시한
+                    유니버설 스튜디오와의 콜라보 프로젝트인 학생응원 캠페인 ’유니봄‘ 의 테마송으로, 이전에 모집했던 원작을 바탕으로 제작되었다. CM 주제는 ‘잊을 수 없는 봄이 필요해’ 로,
+                    어른이 되어도 마음 한 켠에 간직하고 있는 친구들과의 잊을 수 없는 유니버설 스튜디오에서의 소중한 봄의 추억이 깃든 마음을 표현한 곡이다.</div>
+            </li>
+            <li>
+                <div class="date">2022.10.19</div><img src="image/news/2022_10_19.png">
+                <div class="detail">유니버셜 스튜디오 재팬과 콜라보레이션이 시작되었다. 테마는 '파크에서의 잊을 수 없는 추억'으로 학생응원 캠페인인 '유니봄(ユニ春)' 의 테마송이 되는
+                    원작 에피소드를 모집한다.</div>
+            </li>
+            <li>
+                <div class="date">2022.9.4</div><img src="image/news/2022_9_4.png">
+                <div class="detail">기동전사 건담 수성의 마녀 오프닝곡 '祝福(축복)'을 담당하는 것이 발표되었다. 원작은 작품의 시리즈 구성과 각본을 담당한 오코우치 이치로가 새로 쓴
+                    단편 〈ゆりかごの星(요람의 별).</div>
+            </li>
+
+        </div>
+    </article>
+
+    <div>
+        <ul id="page-navigation">
+            <li><a href="news=1.html">1</a></li>
+            <li><a href="news=2.html" style="color: #F2285A;">2</a></li>
+            <li><a href="news=3.html">3</a></li>
+            <li><a href="news=4.html">4</a></li>
+            <li><a href="news=5.html">5</a></li>
+            <li><a href="news=6.html">6</a></li>
+            <li><a href="news=7.html">7</a></li>
+            <li><a href="news=8.html">8</a></li>
+            <li><a href="news=9.html">9</a></li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <ul class="footer_list">
+            <li><strong>팀명</strong>
+                <hr>
+            </li>
+            <li>반갑꼬리</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul>
+        <ul class="footer_list">
+            <li>
+                <strong>팀원 소개</strong>
+                <hr>
+            </li>
+            <li>변하연</li>
+            <li>이한별</li>
+            <li>장근필</li>
+        </ul>
+        <ul class="footer_list">
+            <li><strong>연락처</strong>
+                <hr>
+            </li>
+            <li>inhamon0108@gmail.com</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul>
+        <ul class="footer_list">
+            <li><a href="credit.html"><strong>출처</strong></a>
+                <hr>
+            </li>
+
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+
+            <div class="icon-container">
+                <a href="https://twitter.com/YOASOBI_staff" target="_blank"><img src="image/icon/twitter.png"
+                        alt="Twitter" class="icon"></a>
+                <a href="https://www.youtube.com/channel/UCvpredjG93ifbCP1Y77JyFA" target="_blank"><img
+                        src="image/icon/youtube.png" alt="YouTube" class="icon"></a>
+            </div>
+
+        </ul>
+    </div>
+
+</body>
+
+<script>
+    var navToggle = document.getElementById('nav-toggle');
+    var navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('open');
+    });
+
+    window.addEventListener('scroll', function () {
+        var newsItems = document.querySelectorAll('#news-content li');
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        newsItems.forEach(function (item, index) {
+            if (index === 0) {
+                return;
+            }
+
+            var itemPosition = item.getBoundingClientRect().top + scrollPosition;
+
+            if (scrollPosition + window.innerHeight > itemPosition) {
+                item.classList.add('visible');
+            } else {
+                item.classList.remove('visible');
+            }
+        });
+    });
+
+
+</script>
+
+
+</html>

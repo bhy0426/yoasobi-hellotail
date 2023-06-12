@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YOASOBI 활동소개</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link href="style1.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="image/YOASOBI_LOGO.jpg" class="logo">
+    </header>
+    <nav>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="sing.html">가수소개</a></li>
+            <li><a href="music.html">음원소개</a></li>
+            <li><a href="news=1.html">활동소개</a></li>
+            <li><a href="live.html">LIVE</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="nav-line">
+        <hr id="neon-line">
+        <button id="nav-toggle">
+            <img src="image/icon/3bar.png">
+        </button>
+    </div>
+
+    <article id="article_news">
+        <h1 style=>NEWS</h1>
+        <div id="news-content">
+            <li>
+                <div class="date">2021.8.2</div><img src="image/news/2021_8_2.png">
+                <div class="detail">신곡 '러브레터'가 8월 9일 디지털 싱글로 발매되는 것이 발표되었다. 라디오 방송 'SUNDAY'S POST'와의 공동기획 '레터 송 프로젝트'를
+                    통해 만들어진 곡으로, 청취자의 편지를 바탕으로 만들어졌다. 원작으로 당선된 편지는 당시 초등학교 6학년이었던 하츠네(はつね)의 음악에 대한 감사를 담은 편지. 레코딩에는 유니클로
+                    콜라보 라이브에서 함께했던 오사카 토인 고교 취주악부 학생들이 참여했다.</div>
+            </li>
+            <li>
+                <div class="date">2021.6.25</div><img src="image/news/2021_6_25.png">
+                <div class="detail">삼원색의 음원을 7월 2일 발매하는 것이 발표되었다. 음원 발매에 맞추어 같은 날 콜라보레이션 티셔츠 판매를 개시하는 유니클로에서 요아소비 티셔츠를
+                    구매하는 고객에게 원작 〈RGB〉의 프롤로그 만화 〈Prologue to RGB〉 책자를 배포한다. 또한 같은 날에는 데뷔곡인 밤을 달리다의 영어 버전 음원 'Into The
+                    Night' 역시 발매된다.</div>
+            </li>
+            <li>
+                <div class="date">2021.6.14</div><img src="image/news/2021_6_14.png">
+                <div class="detail">유니클로와의 콜라보레이션으로 7월 2일부터 UT 티셔츠가 발매된다는 것이 공개되었다. 밤을 달리다, 봄망초, 아마도, 군청, 하루카, 앙코르, 삼원색
+                    7곡을 이미지로 삼은 디자인으로 여성용 사이즈의 성인용 7종, 아동용 5종이 발매된다. 해외 스토어에서도 발매될 예정이지만 국내 유니클로 스토어에서는 구매할 수 없다.</div>
+            </li>
+
+
+        </div>
+    </article>
+
+    <div>
+        <ul id="page-navigation">
+            <li><a href="news=1.html">1</a></li>
+            <li><a href="news=2.html">2</a></li>
+            <li><a href="news=3.html">3</a></li>
+            <li><a href="news=4.html">4</a></li>
+            <li><a href="news=5.html" style="color: #F2285A;">5</a></li>
+            <li><a href="news=6.html">6</a></li>
+            <li><a href="news=7.html">7</a></li>
+            <li><a href="news=8.html">8</a></li>
+            <li><a href="news=9.html">9</a></li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <ul class="footer_list">
+            <li><strong>팀명</strong>
+                <hr>
+            </li>
+            <li>반갑꼬리</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul>
+        <ul class="footer_list">
+            <li>
+                <strong>팀원 소개</strong>
+                <hr>
+            </li>
+            <li>변하연</li>
+            <li>이한별</li>
+            <li>장근필</li>
+        </ul>
+        <ul class="footer_list">
+            <li><strong>연락처</strong>
+                <hr>
+            </li>
+            <li>inhamon0108@gmail.com</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul>
+        <ul class="footer_list">
+            <li><a href="credit.html"><strong>출처</strong></a>
+                <hr>
+            </li>
+
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+
+            <div class="icon-container">
+                <a href="https://twitter.com/YOASOBI_staff" target="_blank"><img src="image/icon/twitter.png"
+                        alt="Twitter" class="icon"></a>
+                <a href="https://www.youtube.com/channel/UCvpredjG93ifbCP1Y77JyFA" target="_blank"><img
+                        src="image/icon/youtube.png" alt="YouTube" class="icon"></a>
+            </div>
+
+        </ul>
+    </div>
+
+
+</body>
+
+<script>
+    var navToggle = document.getElementById('nav-toggle');
+    var navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('open');
+    });
+
+    window.addEventListener('scroll', function () {
+        var newsItems = document.querySelectorAll('#news-content li');
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        newsItems.forEach(function (item, index) {
+            if (index === 0) {
+                return;
+            }
+
+            var itemPosition = item.getBoundingClientRect().top + scrollPosition;
+
+            if (scrollPosition + window.innerHeight > itemPosition) {
+                item.classList.add('visible');
+            } else {
+                item.classList.remove('visible');
+            }
+        });
+    });
+
+
+</script>
+
+
+</html>
