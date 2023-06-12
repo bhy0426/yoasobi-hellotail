@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YOASOBI 활동소개</title>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <link href="style1.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <img src="image/YOASOBI_LOGO.jpg" class="logo">
+    </header>
+    <nav>
+
+        <ul id="nav-menu">
+            <li><a href="index.html">홈</a></li>
+            <li><a href="sing.html">가수소개</a></li>
+            <li><a href="music.html">음원소개</a></li>
+            <li><a href="news=1.html">활동소개</a></li>
+            <li><a href="live.html">LIVE</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="nav-line">
+        <hr id="neon-line">
+        <button id="nav-toggle">
+            <img src="image/icon/3bar.png">
+        </button>
+    </div>
+
+    <article id="article_news">
+        <h1 style=>NEWS</h1>
+        <div id="news-content">
+            <li>
+                <div class="date">2021.1.6</div><img src="image/news/2021_1_6.png">
+                <div class="detail">YOASOBI 첫 EP 《THE BOOK》 발매와 동시에 신곡인 '앙코르'를 포함한 전곡의 음원이 공개되었으며, 같은 날 방영을 시작한 애니메이션
+                    BEASTARS 2기 오프닝곡인 '괴물'의 풀버전 음원이 공개되었다. 같은 날에는 요아소비 오피셜 팬클럽 'CLUB 요아소비(夜遊)'의 사전 오픈과 함께 2021년 2월 14일 첫
+                    온라인 라이브 'KEEP OUT THEATER'를 개최하는 것 또한 발표되었다.</div>
+            </li>
+            <li>
+                <div class="date">2020.12.23</div>
+                <div class="detail">홍백가합전에 출전하는 것이 발표되었다. 밤을 달리다를 공연할 예정으로, 함께 발표된 코멘트에도 적혀 있듯 THE FIRST TAKE 촬영 정도를
+                    제외하면 라이브를 개최하거나 음악 프로그램에 참여한 적도 없기 때문에 홍백가합전에서 첫 라이브 퍼포먼스를 펼치는 셈.</div>
+            </li>
+            <li>
+                <div class="date">2020.11.5</div><img src="image/news/2020_11_5.png">
+                <div class="detail">2021년 1분기 방영되는 애니메이션 BEASTARS 2기 오프닝곡으로 신곡 '괴물'이 타이업되었다.</div>
+            </li>
+            <li>
+                <div class="date">2020.10.30</div>
+                <div class="detail">MTV 비디오 뮤직 어워드 재팬 2020에서 밤을 달리다가 특별상인 SONG OF THE YEAR를 수상하였다.</div>
+            </li>
+
+
+        </div>
+    </article>
+
+    <div>
+        <ul id="page-navigation">
+            <li><a href="news=1.html">1</a></li>
+            <li><a href="news=2.html">2</a></li>
+            <li><a href="news=3.html">3</a></li>
+            <li><a href="news=4.html">4</a></li>
+            <li><a href="news=5.html">5</a></li>
+            <li><a href="news=6.html">6</a></li>
+            <li><a href="news=7.html">7</a></li>
+            <li><a href="news=8.html" style="color: #F2285A;">8</a></li>
+            <li><a href="news=9.html">9</a></li>
+        </ul>
+    </div>
+
+    <div id="footer">
+        <ul class="footer_list">
+            <li><strong>팀명</strong>
+                <hr>
+            </li>
+            <li>반갑꼬리</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul>
+        <ul class="footer_list">
+            <li>
+                <strong>팀원 소개</strong>
+                <hr>
+            </li>
+            <li>변하연</li>
+            <li>이한별</li>
+            <li>장근필</li>
+        </ul>
+        <ul class="footer_list">
+            <li><strong>연락처</strong>
+                <hr>
+            </li>
+            <li>inhamon0108@gmail.com</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+        </ul>
+        <ul class="footer_list">
+            <li><a href="credit.html"><strong>출처</strong></a>
+                <hr>
+            </li>
+
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+
+            <div class="icon-container">
+                <a href="https://twitter.com/YOASOBI_staff" target="_blank"><img src="image/icon/twitter.png"
+                        alt="Twitter" class="icon"></a>
+                <a href="https://www.youtube.com/channel/UCvpredjG93ifbCP1Y77JyFA" target="_blank"><img
+                        src="image/icon/youtube.png" alt="YouTube" class="icon"></a>
+            </div>
+
+        </ul>
+    </div>
+
+</body>
+<script>
+    var navToggle = document.getElementById('nav-toggle');
+    var navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('open');
+    });
+
+    window.addEventListener('scroll', function () {
+        var newsItems = document.querySelectorAll('#news-content li');
+        var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+        newsItems.forEach(function (item, index) {
+            if (index === 0) {
+                return;
+            }
+
+            var itemPosition = item.getBoundingClientRect().top + scrollPosition;
+
+            if (scrollPosition + window.innerHeight > itemPosition) {
+                item.classList.add('visible');
+            } else {
+                item.classList.remove('visible');
+            }
+        });
+    });
+
+
+</script>
+
+</html>
